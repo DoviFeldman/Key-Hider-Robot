@@ -75,18 +75,6 @@ void loop() {
     }
   }
   
-  if (!detectionMode) { // deepseek
-  if (distance >= MIN_DISTANCE && distance <= MAX_DISTANCE) {
-    // Map distance to angle
-    int servoAngle = map(distance, MIN_DISTANCE, MAX_DISTANCE, MIN_ANGLE, MAX_ANGLE);
-    myServo.write(servoAngle);
-  } else {
-    myServo.write(180); // No object → return to 180°
-  }
-}
-
-  
-  
   // Small delay for stability
   delay(50);
 }
